@@ -1,0 +1,241 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(back_12.PNG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: #000000 0px 0px 8px;
+
+    margin: 20px 0;
+}
+
+.p,
+p {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: #000000 0px 0px 8px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+p {
+    color: rgb(0, 0, 0);
+    text-shadow: none;
+}
+
+.formulario {
+    background: transparent;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 500px;
+
+    border-radius: 15px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+
+    padding: 20px;
+    backdrop-filter: blur(5px);
+
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.formulario .p {
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 217, 0, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 100%;
+    margin-top: 5px;
+    outline: none;
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+
+input:focus {
+    box-shadow: 0px 0px 8px rgba(255, 217, 0, 0.8);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+button {
+    margin: 20px auto 0;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: #ffffff 0px 0px 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.resultado {
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.resultado p {
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+
+strong {
+
+    font-weight: 900;
+}
+
+strong.cor-magreza {
+    color: #ffd700;
+
+    text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.5);
+}
+
+strong.cor-normal {
+    color: #00ff88;
+
+    text-shadow: 0px 0px 8px rgba(0, 255, 136, 0.5);
+}
+
+strong.cor-sobrepeso {
+    color: #00d0ff;
+
+    text-shadow: 0px 0px 8px rgba(0, 208, 255, 0.5);
+}
+
+strong.cor-obesidade {
+    color: #ff3333;
+
+    text-shadow: 0px 0px 8px rgba(255, 51, 51, 0.5);
+    background: transparent;
+
+}
+
+
+
+
+.caixas {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.consequencias,
+.consequenciasMagreza {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+
+.consequencias:hover .caixa,
+.consequenciasMagreza:hover .caixa {
+    filter: blur(3px);
+    opacity: 0.5;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+
+.caixa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 14px;
+    padding: 22px;
+    width: 300px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+    filter: blur(4px);
+
+}
+
+.caixa h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+.consequencias .caixa:hover,
+.consequenciasMagreza .caixa:hover {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(255, 0, 0, 0.466);
+    z-index: 10;
+}
+
+
+.consequenciasMagreza .caixa:hover {
+    box-shadow: 0 18px 40px rgba(0, 150, 255, 0.466);
+
+}
+
+.extra {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.35s ease, max-height 0.35s ease, margin 0.35s ease;
+    text-align: center;
+
+    color: #ffffff;
+    font-size: 15px;
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+.caixa:hover .extra {
+    opacity: 1;
+    max-height: 300px;
+
+    margin-top: 15px;
+}
